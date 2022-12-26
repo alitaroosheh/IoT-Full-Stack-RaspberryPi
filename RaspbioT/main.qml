@@ -12,17 +12,51 @@ import Qt.labs.calendar 1.0
 
 ApplicationWindow {
     id: window
-    width: 640
-    height: 480
+    width: 1200
+    height: 800
     visible: true
-    title: qsTr("Hello World")
+//    visibility: "FullScreen"
+    title: qsTr("RaspioT")
 
-    Text {
+
+    header: Label {
+        text: view.currentItem.title
+        horizontalAlignment: Text.AlignHCenter
+    }
+
+    SwipeView {
+        id: view
+        anchors.fill: parent
+
+        Page {
+            title: qsTr("Home")
+        }
+        Page {
+            title: qsTr("Discover")
+        }
+        Page {
+            title: qsTr("Activity")
+        }
+    }
+
+    Button {
+        id: btnShutdown
         x: 100
         y: 100
-        text: "\uf010\uf011\uf012\uf013\uf013\uf014\uf015\uf016\uf017"
+        width: 100
+        height: 100
+        text: "\uf011"
         font.family: fontLoader.name
-        color: "floralwhite"
+        palette {
+            button: "green"
+        }
+
+
+        onClicked: {
+            qmlInteractor.shutdown()
+        }
+        //onClicked: qmlInteractor.Shutdown
+
     }
 
     FontLoader {
