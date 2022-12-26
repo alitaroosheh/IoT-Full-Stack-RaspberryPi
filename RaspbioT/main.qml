@@ -17,6 +17,19 @@ ApplicationWindow {
     visible: true
     title: qsTr("Hello World")
 
+    Text {
+        x: 100
+        y: 100
+        text: "\uf010\uf011\uf012\uf013\uf013\uf014\uf015\uf016\uf017"
+        font.family: fontLoader.name
+        color: "floralwhite"
+    }
+
+    FontLoader {
+        id: fontLoader
+        source: "qrc:/Fonts/Font Awesome 6 Free-Solid-900.otf"
+    }
+
 
     TextField
     {
