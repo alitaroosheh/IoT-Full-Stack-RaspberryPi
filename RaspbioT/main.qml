@@ -12,52 +12,12 @@ import Qt.labs.calendar 1.0
 
 ApplicationWindow {
     id: window
-    width: 1200
-    height: 800
+    width: 1920
+    height: 1080
     visible: true
-//    visibility: "FullScreen"
+    visibility: "FullScreen"
     title: qsTr("RaspioT")
 
-
-    header: Label {
-        text: view.currentItem.title
-        horizontalAlignment: Text.AlignHCenter
-    }
-
-    SwipeView {
-        id: view
-        anchors.fill: parent
-
-        Page {
-            title: qsTr("Home")
-        }
-        Page {
-            title: qsTr("Discover")
-        }
-        Page {
-            title: qsTr("Activity")
-        }
-    }
-
-    Button {
-        id: btnShutdown
-        x: 100
-        y: 100
-        width: 100
-        height: 100
-        text: "\uf011"
-        font.family: fontLoader.name
-        palette {
-            button: "green"
-        }
-
-
-        onClicked: {
-            qmlInteractor.shutdown()
-        }
-        //onClicked: qmlInteractor.Shutdown
-
-    }
 
     FontLoader {
         id: fontLoader
@@ -65,16 +25,90 @@ ApplicationWindow {
     }
 
 
-    TextField
-    {
-        id: textField
-        x: 1
-        y: 1
-        width: window.width/2
-        height: 40
-        focus: true
-        color: "floralwhite"
+    GridLayout {
+        x: 0
+        y: 0
+        width: window.width
+        height: 100
+        id: grid
+        columns: 5
+        anchors.right: parent
+
+        Button {
+            id: btnShutdown
+            Layout.alignment: Qt.AlignRight
+            width: 100
+            height: 100
+            text: "\uf011"
+            font.family: fontLoader.name
+            font.pointSize: 15
+            Material.foreground: "yellowgreen"
+            Material.background: "transparent"
+            onClicked: {
+                qmlInteractor.shutdown()
+            }
+        }
+        Button {
+            id: btnSettings
+            Layout.alignment: Qt.AlignRight
+            width: 100
+            height: 100
+            text: "\uf013"
+            font.family: fontLoader.name
+            font.pointSize: 15
+            Material.foreground: "yellowgreen"
+            Material.background: "transparent"
+            onClicked: {
+                qmlInteractor.shutdown()
+            }
+        }
+        Button {
+            id: btnHome
+            Layout.alignment: Qt.AlignRight
+            width: 100
+            height: 100
+            text: "\uf015"
+            font.family: fontLoader.name
+            font.pointSize: 15
+            Material.foreground: "yellowgreen"
+            Material.background: "transparent"
+            onClicked: {
+                qmlInteractor.shutdown()
+            }
+        }
+        Button {
+            id: btnHome1
+            Layout.alignment: Qt.AlignRight
+            width: 100
+            height: 100
+            text: "\uf015"
+            font.family: fontLoader.name
+            font.pointSize: 15
+            Material.foreground: "yellowgreen"
+            Material.background: "transparent"
+            onClicked: {
+                qmlInteractor.shutdown()
+            }
+        }
+        Button {
+            id: btnHome2
+            Layout.alignment: Qt.AlignRight
+            width: 100
+            height: 100
+            text: "\uf015"
+            font.family: fontLoader.name
+            font.pointSize: 15
+            Material.foreground: "yellowgreen"
+            Material.background: "transparent"
+            onClicked: {
+                qmlInteractor.shutdown()
+            }
+        }
     }
+
+
+
+
 
     InputPanel {
         id: inputPanel
