@@ -28,11 +28,12 @@ ApplicationWindow {
     GridLayout {
         x: 0
         y: 0
-        width: window.width
+        //width: window.width
         height: 100
         id: grid
-        columns: 5
-        anchors.right: parent
+        //anchors.right: parent
+        columns: 3
+        layoutDirection: Qt.RightToLeft
 
         Button {
             id: btnShutdown
@@ -64,34 +65,6 @@ ApplicationWindow {
         }
         Button {
             id: btnHome
-            Layout.alignment: Qt.AlignRight
-            width: 100
-            height: 100
-            text: "\uf015"
-            font.family: fontLoader.name
-            font.pointSize: 15
-            Material.foreground: "yellowgreen"
-            Material.background: "transparent"
-            onClicked: {
-                qmlInteractor.shutdown()
-            }
-        }
-        Button {
-            id: btnHome1
-            Layout.alignment: Qt.AlignRight
-            width: 100
-            height: 100
-            text: "\uf015"
-            font.family: fontLoader.name
-            font.pointSize: 15
-            Material.foreground: "yellowgreen"
-            Material.background: "transparent"
-            onClicked: {
-                qmlInteractor.shutdown()
-            }
-        }
-        Button {
-            id: btnHome2
             Layout.alignment: Qt.AlignRight
             width: 100
             height: 100
