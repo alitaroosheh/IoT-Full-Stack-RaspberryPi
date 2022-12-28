@@ -46,7 +46,8 @@ ApplicationWindow {
             Material.foreground: "yellowgreen"
             Material.background: "transparent"
             onClicked: {
-                qmlInteractor.shutdown()
+                Qt.quit()
+                //qmlInteractor.shutdown()
             }
         }
         Button {
@@ -60,7 +61,7 @@ ApplicationWindow {
             Material.foreground: "yellowgreen"
             Material.background: "transparent"
             onClicked: {
-                qmlInteractor.shutdown()
+                //qmlInteractor.shutdown()
             }
         }
         Button {
@@ -74,7 +75,7 @@ ApplicationWindow {
             Material.foreground: "yellowgreen"
             Material.background: "transparent"
             onClicked: {
-                qmlInteractor.shutdown()
+                //qmlInteractor.shutdown()
             }
         }
     }
