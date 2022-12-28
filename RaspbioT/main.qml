@@ -24,92 +24,143 @@ ApplicationWindow {
         source: "qrc:/Fonts/Font Awesome 6 Free-Solid-900.otf"
     }
 
+    header: ToolBar {
+        Material.background: "#25252b"
+        RowLayout {
+            id: headerRowLayout
+            anchors.fill: parent
+            spacing: 0
 
-    GridLayout {
-        x: 0
-        y: 0
-        //width: window.width
-        height: 100
-        id: grid
-        //anchors.right: parent
-        columns: 3
-        layoutDirection: Qt.RightToLeft
-
-        Button {
-            id: btnShutdown
-            Layout.alignment: Qt.AlignRight
-            width: 100
-            height: 100
-            text: "\uf011"
-            font.family: fontLoader.name
-            font.pointSize: 15
-            Material.foreground: "yellowgreen"
-            Material.background: "transparent"
-            onClicked: {
-                Qt.quit()
-                //qmlInteractor.shutdown()
-            }
-        }
-        Button {
-            id: btnSettings
-            Layout.alignment: Qt.AlignRight
-            width: 100
-            height: 100
-            text: "\uf013"
-            font.family: fontLoader.name
-            font.pointSize: 15
-            Material.foreground: "yellowgreen"
-            Material.background: "transparent"
-            onClicked: {
-                //qmlInteractor.shutdown()
-            }
-        }
-        Button {
-            id: btnHome
-            Layout.alignment: Qt.AlignRight
-            width: 100
-            height: 100
-            text: "\uf015"
-            font.family: fontLoader.name
-            font.pointSize: 15
-            Material.foreground: "yellowgreen"
-            Material.background: "transparent"
-            onClicked: {
-                //qmlInteractor.shutdown()
-            }
-        }
-    }
-
-
-
-
-
-    InputPanel {
-        id: inputPanel
-        z: 99
-        x: 0
-        y: window.height
-        width: window.width
-
-        states: State {
-            name: "visible"
-            when: inputPanel.active
-            PropertyChanges {
-                target: inputPanel
-                y: window.height - inputPanel.height
-            }
-        }
-        transitions: Transition {
-            from: ""
-            to: "visible"
-            reversible: true
-            ParallelAnimation {
-                NumberAnimation {
-                    properties: "y"
-                    duration: 250
-                    easing.type: Easing.InOutQuad
+            ToolButton {
+                id: btnSettings
+                Layout.alignment: Qt.AlignRight
+                width: 100
+                height: 100
+                text: "\uf013"
+                font.family: fontLoader.name
+                font.pointSize: 15
+                Material.foreground: "yellowgreen"
+                Material.background: "transparent"
+                onClicked: {
+                    //qmlInteractor.shutdown()
                 }
             }
+
+            ToolButton {
+                id: btnHome
+                Layout.alignment: Qt.AlignRight
+                width: 100
+                height: 100
+                text: "\uf015"
+                font.family: fontLoader.name
+                font.pointSize: 15
+                Material.foreground: "yellowgreen"
+                Material.background: "transparent"
+                onClicked: {
+                    //qmlInteractor.shutdown()
+                }
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+
+            ToolButton {
+                id: btnShutdown
+                text: "\uf011" //power
+                font.family: fontLoader.name
+                font.pointSize: 15
+                Material.foreground: "yellowgreen"
+                Material.background: "transparent"
+                onClicked: Qt.quit()
+            }
         }
     }
+
+//    GridLayout {
+//        x: 0
+//        y: 0
+//        //width: window.width
+//        height: 100
+//        id: grid
+//        //anchors.right: parent
+//        columns: 3
+//        layoutDirection: Qt.RightToLeft
+
+//        Button {
+//            id: btnShutdown
+//            Layout.alignment: Qt.AlignRight
+//            width: 100
+//            height: 100
+//            text: "\uf011"
+//            font.family: fontLoader.name
+//            font.pointSize: 15
+//            Material.foreground: "yellowgreen"
+//            Material.background: "transparent"
+//            onClicked: {
+//                Qt.quit()
+//                //qmlInteractor.shutdown()
+//            }
+//        }
+//        Button {
+//            id: btnSettings
+//            Layout.alignment: Qt.AlignRight
+//            width: 100
+//            height: 100
+//            text: "\uf013"
+//            font.family: fontLoader.name
+//            font.pointSize: 15
+//            Material.foreground: "yellowgreen"
+//            Material.background: "transparent"
+//            onClicked: {
+//                //qmlInteractor.shutdown()
+//            }
+//        }
+//        Button {
+//            id: btnHome
+//            Layout.alignment: Qt.AlignRight
+//            width: 100
+//            height: 100
+//            text: "\uf015"
+//            font.family: fontLoader.name
+//            font.pointSize: 15
+//            Material.foreground: "yellowgreen"
+//            Material.background: "transparent"
+//            onClicked: {
+//                //qmlInteractor.shutdown()
+//            }
+//        }
+//    }
+
+
+
+
+
+//    InputPanel {
+//        id: inputPanel
+//        z: 99
+//        x: 0
+//        y: window.height
+//        width: window.width
+
+//        states: State {
+//            name: "visible"
+//            when: inputPanel.active
+//            PropertyChanges {
+//                target: inputPanel
+//                y: window.height - inputPanel.height
+//            }
+//        }
+//        transitions: Transition {
+//            from: ""
+//            to: "visible"
+//            reversible: true
+//            ParallelAnimation {
+//                NumberAnimation {
+//                    properties: "y"
+//                    duration: 250
+//                    easing.type: Easing.InOutQuad
+//                }
+//            }
+//        }
+//    }
 }
