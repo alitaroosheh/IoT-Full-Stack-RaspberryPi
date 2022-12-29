@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include "qmlinteractor.h"
 #include <QQmlContext>
+//#include <QMqttClient>
 
 
 int main(int argc, char *argv[])
