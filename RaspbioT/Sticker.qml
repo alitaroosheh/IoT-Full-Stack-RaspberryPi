@@ -25,7 +25,7 @@ Item {
         source: rect
         horizontalOffset: 5
         verticalOffset: 5
-        opacity: 0.2
+        opacity: 0.3
         radius: 15
         samples: 16
         color: "green"

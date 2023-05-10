@@ -95,7 +95,7 @@ ApplicationWindow {
             width: parent.width-100
             height: parent.height-100
             anchors.centerIn: parent
-//            rows    : 2
+            rows    : 2
             columns : 2
 
 //            Text { text: "Three"; font.bold: true; color: "red"}
@@ -104,22 +104,22 @@ ApplicationWindow {
 //            Text { text: "a"; font.pixelSize: 20; color: "red"}
 //            Text { text: "row"; font.strikeout: true; color: "red" }
 
-            Sticker {
-                id: stickerNotification
-                Layout.columnSpan: 1
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-//                Layout.row : 0
-//                Layout.column : 0
-                //anchors.centerIn: parent
-                //width: parent.width * 1/2
-                //height: parent.height * 1/2
-                Label {
-                    anchors.centerIn: parent
-                    text: "Notifications"
-                    font.pointSize: 32
-                }
-            }
+//            Sticker {
+//                id: stickerNotification
+//                Layout.columnSpan: 1
+//                Layout.fillWidth: true
+//                Layout.fillHeight: true
+////                Layout.row : 0
+////                Layout.column : 0
+//                //anchors.centerIn: parent
+//                //width: parent.width * 1/2
+//                //height: parent.height * 1/2
+//                Label {
+//                    anchors.centerIn: parent
+//                    text: "Notifications"
+//                    font.pointSize: 32
+//                }
+//            }
 
             Sticker {
                 id: stickerPlayer
@@ -140,7 +140,7 @@ ApplicationWindow {
 
             Sticker {
                 id: stickerDevices
-                Layout.columnSpan: 1
+                Layout.rowSpan: 2
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 //                Layout.row : 1
